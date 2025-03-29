@@ -1,0 +1,95 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Bias Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Build Your Own Hiring Algorithm</h1>
+        <p class="intro">Choose one of these hiring algorithms and see how it rates different candidates.</p>
+        
+        <div class="algorithm-selector">
+            <h2>Which hiring algorithm would you choose?</h2>
+            
+            <div class="algorithm-options">
+                <div class="algorithm-option">
+                    <input type="radio" name="algorithm" id="traditional" value="traditional">
+                    <label for="traditional">
+                        <strong>"Traditional Success" Algorithm</strong>
+                        <p>Prioritizes: Elite education, prestigious previous employers, uninterrupted work history</p>
+                    </label>
+                </div>
+                
+                <div class="algorithm-option">
+                    <input type="radio" name="algorithm" id="skills" value="skills">
+                    <label for="skills">
+                        <strong>"Skills-First" Algorithm</strong>
+                        <p>Prioritizes: Technical assessment scores, portfolio quality, years of relevant experience</p>
+                    </label>
+                </div>
+                
+                <div class="algorithm-option">
+                    <input type="radio" name="algorithm" id="potential" value="potential">
+                    <label for="potential">
+                        <strong>"Potential-Focused" Algorithm</strong>
+                        <p>Prioritizes: Learning ability, problem-solving skills, growth trajectory</p>
+                    </label>
+                </div>
+                
+                <div class="algorithm-option">
+                    <input type="radio" name="algorithm" id="diversity" value="diversity">
+                    <label for="diversity">
+                        <strong>"Diversity-Conscious" Algorithm</strong>
+                        <p>Uses the same criteria as "Skills-First" but includes steps to mitigate bias from zip code, school name, and employment gaps</p>
+                    </label>
+                </div>
+            </div>
+            
+            <button id="see-results">See Results</button>
+        </div>
+        
+        <div class="candidates" id="candidates-section" style="display: none;">
+            <h2>Meet Our Candidates</h2>
+            
+            <div class="candidate-grid">
+                <div class="candidate">
+                    <h3>Candidate A</h3>
+                    <p>Ivy League degree, 3 years at top tech company, high technical score, lives in affluent area, 2-year employment gap (for childcare)</p>
+                </div>
+                
+                <div class="candidate">
+                    <h3>Candidate B</h3>
+                    <p>State university degree, 5 years experience at medium companies, steady employment, above-average technical score, lives in middle-class suburb</p>
+                </div>
+                
+                <div class="candidate">
+                    <h3>Candidate C</h3>
+                    <p>Community college degree, 7 years total experience across small companies, highest technical score, lives in historically underserved neighborhood</p>
+                </div>
+                
+                <div class="candidate">
+                    <h3>Candidate D</h3>
+                    <p>Self-taught, no degree, 4 years experience including 1 year at a top company, strong portfolio, high technical score, employment gaps</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results" id="results-section" style="display: none;">
+            <h2>Algorithm Results</h2>
+            <div id="results-content"></div>
+            
+            <div class="reflection">
+                <h3>What This Means</h3>
+                <p>Notice how different algorithm designs can completely reverse candidate rankings? The choices algorithm designers make determine who gets opportunities and who doesn't.</p>
+                <p>This simple demonstration shows how algorithm design choices directly affect outcomes and can either reinforce existing inequalities or help create new pathways for talent.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
